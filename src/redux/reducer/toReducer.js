@@ -6,21 +6,24 @@ const initialState = {
             {
                 Id: 1,
                 Heading: 'Enter new Data',
-                Title: 'xyz'
+                Title: 'xyz',
+                IsDone: false
             },
         ],
         ongoing: [
             {
                 Id: 2,
                 Heading: 'Complete It',
-                Title: 'pqr'
+                Title: 'pqr',
+                IsDone: false
             },
         ],
         finished: [
             {
                 Id: 3,
                 Heading: 'Already Done',
-                Title: 'abc'
+                Title: 'abc',
+                IsDone: false
             },
         ]
     }
@@ -36,7 +39,7 @@ const toReducer = (state = initialState, action) => {
         case Delete: {
             return { data: { ...state.data, ...payload } }
         }
-        case Edit:{
+        case Edit: {
             return { data: { ...state.data, ...payload } }
         }
         default:
